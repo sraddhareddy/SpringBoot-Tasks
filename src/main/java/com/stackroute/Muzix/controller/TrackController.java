@@ -13,7 +13,7 @@ import java.util.List;
 public class TrackController {
 
     private TrackService trackService;
-
+  @Autowired
     public TrackController(TrackService trackService) {
         this.trackService = trackService;
     }
@@ -30,7 +30,7 @@ public class TrackController {
       }
       return responseEntity;
   }
-  @GetMapping("track")
+  @GetMapping("tracks
   public ResponseEntity<?> getAlltracks(){
 
         return new ResponseEntity<List<Track>>(trackService.getAllTracks(),HttpStatus.OK);
