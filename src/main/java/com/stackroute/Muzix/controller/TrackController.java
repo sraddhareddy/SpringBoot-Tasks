@@ -30,7 +30,7 @@ public class TrackController {
       }
       return responseEntity;
   }
-  @GetMapping("tracks
+  @GetMapping("tracks")
   public ResponseEntity<?> getAlltracks(){
 
         return new ResponseEntity<List<Track>>(trackService.getAllTracks(),HttpStatus.OK);
